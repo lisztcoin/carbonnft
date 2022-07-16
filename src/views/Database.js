@@ -11,11 +11,7 @@ import {
   Text
 } from 'evergreen-ui'
 
-import LogStoreControls from '../components/LogStoreControls'
-import FeedStoreControls from '../components/FeedStoreControls'
 import KeyValueStoreControls from '../components/KeyValueStoreControls'
-import DocumentStoreControls from '../components/DocumentStoreControls'
-import CounterStoreControls from '../components/CounterStoreControls'
 
 import { getDB } from '../database'
 import { useStateValue, actions } from '../state'
@@ -172,16 +168,8 @@ function ProgramView () {
     const db = appState.db
     if (!db) return
 
-    if (db.type === 'eventlog')
-      return <LogStoreControls />
-    else if (db.type === 'feed')
-      return <FeedStoreControls />
-    else if (db.type === 'docstore')
-      return <DocumentStoreControls />
-    else if (db.type === 'keyvalue')
+    if (db.type === 'keyvalue')
       return <KeyValueStoreControls />
-    else if (db.type === 'counter')
-      return <CounterStoreControls />
     else
       return <Text intent='danger'>No input controls found for '{db.type}'</Text>
   }

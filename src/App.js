@@ -15,6 +15,7 @@ import { Web3Provider } from '@ethersproject/providers'
 import Questions from './views/Questions'
 import MintControl from './views/MintControl'
 import NFTList from './views/NFTList'
+import Mainpage from './views/Mainpage'
 
 function getLibrary(provider) {
   const library = new Web3Provider(provider)
@@ -123,6 +124,9 @@ function App () {
             </Route>
             <Route path='/rewards'>
               <NFTList />
+            </Route>
+            <Route path='/'>
+              <Mainpage />
             </Route>
           </Switch>
         </Pane>

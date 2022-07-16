@@ -7,6 +7,7 @@ import {
   Pane,
   Checkbox,
   Spinner,
+  TextInput,
   Text
 } from 'evergreen-ui'
 import { getDB } from '../database'
@@ -99,10 +100,11 @@ function Questions () {
             <Checkbox checked={checked1} onChange={e => setChecked1(e.target.checked)} label="I rode public transportation" />
             <Checkbox checked={checked2} onChange={e => setChecked2(e.target.checked)} label="I recycled something" />
             <Checkbox checked={checked3} onChange={e => setChecked3(e.target.checked)} label="I used my own cup for drinks" />
-            
+            <TextInput name="text-input" placeholder="Or anything else?" />
           <Button
             iconBefore='document'
             appearance='default'
+            marginTop={10}
             height={24}
             width={80}
             onClick={submitReport}

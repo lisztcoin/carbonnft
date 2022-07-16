@@ -47,7 +47,7 @@ function Systems () {
         <Pane display='flex' flexDirection='row' width='100%'>
           <TabNavigation>
           <Tab key="report" is="a" href="/#/report" id="report" isSelected={location.pathname === '/report'}>
-            Report Daily Carbon Activities
+            Report Your Actions
             </Tab>
             <Tab key="rewards" is="a" href="/#/rewards" id="rewards" isSelected={location.pathname === '/rewards'}>
            Your Rewards

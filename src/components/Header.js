@@ -37,7 +37,7 @@ function Header () {
           >
             <img alt="" src='Tree.png' width={majorScale(5)}/>
             <Heading size={800} fontFamily='Titillium Web' marginX={majorScale(2)}>
-            Carbon Rewards
+            Carbon NFT Lucky Draw
             </Heading>
           </Link>
         </Pane>

@@ -132,14 +132,18 @@ function MintControl () {
           marginTop={majorScale(2)}
           marginBottom={majorScale(1)}
         > 
+          <Text size={700} marginTop={10}> Trigger a mint so winner for today can be drawn.  </Text>
+          <Text size={700} marginTop={10}> For hackathon purpose, everyone can trigger this anytime. </Text>
+          <Text size={700} marginTop={10}> This page won't exist in real product as the process will be automatically triggered every 24h. </Text>
           <Button
             iconBefore='document'
             appearance='default'
+            marginTop={20}
             height={24}
-            width={80}
+            width={130}
             onClick={mint}
           >
-            Mint
+            Trigger Mint
           </Button>
         </Pane>
         
