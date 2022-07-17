@@ -3,9 +3,9 @@
 
 built by lisztcoin@, specifically for sustainable blockchain hackathon.
 
-Carbon NFT is a lucky draw system. It will reward one random person an NFT from people who have reported on the previous day about the things they did that benefit the environment.
+Carbon NFT is a lucky draw system. It will reward one random person an NFT from all people who have reported about the things they did that benefit the environment on the previous day.
 
-Link to Demo
+[Link to Demo](https://youtu.be/TLvybBBwBwc)
 
 Try it live on [carbonnft.web.app](carbonnft.web.app) (please connect to Rinkeby, no ETH is needed)
 
