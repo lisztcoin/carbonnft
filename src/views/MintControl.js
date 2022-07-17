@@ -43,19 +43,30 @@ function MintControl () {
         mintForWinner()
       }
 
+      useEffect(() => {
+        let stale = false;
+        if (!!account && !!library) {
+            const carbon_contract = new Contract(CARBONNFT_CONTRACT, carbon_abi, library.getSigner(account));
+            carbon_contract.tokenId().then(
+              (id) => {
+                  setTokenId(id.toNumber());
+                  console.log("token" + id);
+              }
+          ).catch(
+              () => {console.log("error!");}
+          )        
+            return () => {
+                stale = true
+                // do nothing.
+            }
+        }
+    }, [account, library])        
+
       const mintForWinner = async () => {
         const storage = new NFTStorage({ endpoint, token })
         const carbon_contract = new Contract(CARBONNFT_CONTRACT, carbon_abi, library.getSigner(account));
-
-        carbon_contract.tokenId().then(
-            (id) => {
-                setTokenId(id.toNumber());
-                console.log("token" + id);
-            }
-        ).catch(
-            () => {console.log("error!");}
-        )        
-
+        console.log("token is: ")
+        console.log(tokenId);
         // Upload NFT image using NFTStorage
         // Because we are using the same picture for simplicity, below code is commented out.
         // const data = await fs.promises.readFile('Tree.png')
@@ -66,7 +77,7 @@ function MintControl () {
         const image_url = "https://" + image_cid + ".ipfs.nftstorage.link/"
         
         const metadata = {
-          "external_url": "https://www.carbonnft.art/",
+          "external_url": "https://carbonnft.web.app/",
           "image": image_url,
           "description": "CarbonNFT is a reward NFT for people who log their carbon footprint.",
           "name": "Carbon NFT #" + tokenId

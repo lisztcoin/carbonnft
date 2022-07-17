@@ -85,7 +85,7 @@ function Questions () {
             marginTop={majorScale(3)}
             marginBottom={majorScale(2)}
           >
-            Report Daily Carbon Activities
+            Report Your Actions
           </Heading>
         </Pane>
         
@@ -95,16 +95,16 @@ function Questions () {
           marginX={majorScale(6)}
           marginTop={majorScale(2)}
           marginBottom={majorScale(1)}
-        > {alreadyEntered ? (<Text> Thanks for reporting! Please wait for the draw. Also don't forget to report tomorrow.</Text>) : (
+        > {alreadyEntered ? (<Text> Thanks for reporting! Please wait for the draw to happen. Also don't forget to report tomorrow.</Text>) : (
             <>
             <Checkbox checked={checked1} onChange={e => setChecked1(e.target.checked)} label="I rode public transportation" />
             <Checkbox checked={checked2} onChange={e => setChecked2(e.target.checked)} label="I recycled something" />
             <Checkbox checked={checked3} onChange={e => setChecked3(e.target.checked)} label="I used my own cup for drinks" />
-            <TextInput name="text-input" placeholder="Or anything else?" />
+            <TextInput name="text-input" marginTop={10} placeholder="Or anything else?" />
           <Button
             iconBefore='document'
             appearance='default'
-            marginTop={10}
+            marginTop={12}
             height={24}
             width={80}
             onClick={submitReport}

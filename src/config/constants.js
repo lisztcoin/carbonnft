@@ -10,11 +10,11 @@ export const Networks = {
   }
 
 export const CARBONNFT_CONTRACT_BY_NETWORK = {
-    [Networks.Rinkeby] : "0xE32E3D3ceBB7B1a4eC167967f40b39f3161B27f6",
+    [Networks.Rinkeby] : "0x9D9FC186B73e805A30B63D7e0Fc37c131440d4Ea",
     [Networks.MainNet] : "NotUploaded",
 }
 
-export const CARBONNFT_CONTRACT = "0xE32E3D3ceBB7B1a4eC167967f40b39f3161B27f6"
+export const CARBONNFT_CONTRACT = "0x9D9FC186B73e805A30B63D7e0Fc37c131440d4Ea"
 
 export const ORBIT_DB_ADDRESS = "/orbitdb/zdpuApQT5J5kUZDLCuQAsL2w8a2vusM9M5inyKcz9B7gaio2P/public"
 
