@@ -50,7 +50,6 @@ function MintControl () {
             carbon_contract.tokenId().then(
               (id) => {
                   setTokenId(id.toNumber());
-                  console.log("token" + id);
               }
           ).catch(
               () => {console.log("error!");}
@@ -65,8 +64,6 @@ function MintControl () {
       const mintForWinner = async () => {
         const storage = new NFTStorage({ endpoint, token })
         const carbon_contract = new Contract(CARBONNFT_CONTRACT, carbon_abi, library.getSigner(account));
-        console.log("token is: ")
-        console.log(tokenId);
         // Upload NFT image using NFTStorage
         // Because we are using the same picture for simplicity, below code is commented out.
         // const data = await fs.promises.readFile('Tree.png')

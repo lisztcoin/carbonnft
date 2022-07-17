@@ -28,8 +28,6 @@ function NFTList () {
     useEffect(() => {
         let stale = false;
         if (!!account && !!library) {
-            console.log(account)
-            console.log(library)
             const carbonnft_contract = new Contract(CARBONNFT_CONTRACT, carbon_abi, library.getSigner(account));
             carbonnft_contract.getAllTokensFromAddress(account).then(
                 (tokens) => {
@@ -48,7 +46,6 @@ function NFTList () {
                 // do nothing.
             }
         }
-        console.log(nftList);
     }, [account, library])
 
     return (
